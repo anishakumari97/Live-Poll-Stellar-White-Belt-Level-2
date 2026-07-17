@@ -1,72 +1,204 @@
-# Live Poll ✦ Stellar Soroban Smart Poll Portal
+# 🗳️ Live Poll: Made Simple
 
-**Live Poll** is a premium, real-time decentralized voting and polling application built on the **Stellar Soroban Smart Contract Platform**. It provides a sleek, modern interface that connects multiple browser extension wallets, tracks contract state through transaction simulation, and streams ledger event logs in real-time.
+> An on-chain, single-question poll built on **Soroban** (Stellar smart contracts), with a multi-wallet React frontend that shows results updating **live** as votes come in — no refresh required.
 
----
+<div align="center">
 
-## 🚀 Verifiable Testnet Deployment
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-live--poll--stellar.vercel.app-10b981?style=for-the-badge)](https://github.com/anishakumari97/Live-Poll-Stellar-White-Belt-Level-2)
+[![Stellar Testnet](https://img.shields.io/badge/Network-Stellar_Testnet-00D2FF?style=for-the-badge)](https://stellar.org)
+[![Soroban](https://img.shields.io/badge/Smart_Contract-Soroban-FF6B6B?style=for-the-badge)](https://soroban.stellar.org)
 
-The smart contract is compiled, deployed, initialized, and seeded on the **Stellar Testnet**:
-
-*   **Smart Contract Address:** `CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2`
-    *   *Verify on Stellar.expert:* [Stellar Explorer Contract Link](https://stellar.expert/explorer/testnet/contract/CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2)
-*   **WASM Upload Transaction Hash:** `c0c108cb7a73eb422d41f6ee9a4c1d250671a1c345378a42d7c4ab99a0f6636e`
-    *   *Verify on Stellar.expert:* [WASM Upload Tx Details](https://stellar.expert/explorer/testnet/tx/c0c108cb7a73eb422d41f6ee9a4c1d250671a1c345378a42d7c4ab99a0f6636e)
-*   **Contract Instantiation Transaction Hash:** `320cc7f1c21b46fca1738e6627086288475ad126e35a97ce005b33c0c1c277fd`
-    *   *Verify on Stellar.expert:* [Instantiation Tx Details](https://stellar.expert/explorer/testnet/tx/320cc7f1c21b46fca1738e6627086288475ad126e35a97ce005b33c0c1c277fd)
-*   **Contract Initialization (`initialize`) Transaction Hash:** `b4ae1fd3cf36f395166671ae41fc881dd86925872bd6b41e15cb315629bbcb6b`
-    *   *Verify on Stellar.expert:* [Initialization Tx Details](https://stellar.expert/explorer/testnet/tx/b4ae1fd3cf36f395166671ae41fc881dd86925872bd6b41e15cb315629bbcb6b)
-
-### Seeded Poll Details (Default State)
-The initial poll has been successfully initialized on-chain:
-*   **Question:** `"What's your favorite Stellar wallet?"`
-*   **Options:** `["Freighter", "xBull", "Lobstr", "Albedo"]`
+</div>
 
 ---
 
-## 🛡️ Core Features & Level 2 Requirements Met
+## 📸 Screenshots
 
-### 1. Multi-Wallet Integration
-*   Powered by the wrapper **StellarWalletsKit** with `allowAllModules()` enabled to support Freighter, xBull, Albedo, Lobstr, Hana, Rabet, WalletConnect, and Ledger.
-
-### 2. Comprehensive Error Handling
-*   Explicit custom errors catch common pitfalls including `WalletNotFoundError`, `UserRejectedError`, `InsufficientBalanceError`, `NetworkError`, and `ContractCallError` to display user-friendly notices.
-
-### 3. Real-Time Event Sync
-*   Subscribes to the contract's `vote` events by polling the Soroban RPC `getEvents` endpoint, enabling the frontend to update the vote distributions dynamically for all active clients without manual refreshing.
+| Dashboard | Connect Wallet |
+|:---------:|:--------------:|
+| ![Dashboard](./docs/live-results.png) | ![Connect Wallet](./docs/wallet-options.png) |
 
 ---
 
-## 💻 Local Setup & Development
+## ✨ Features
 
-### 1. Clone & Configure Environments
-Configure the contract credentials in your environment file:
-```bash
-cd frontend
-cp .env.example .env
+- 🔗 **Wallet Connect** — Supports Freighter, xBull, Lobstr, Albedo, and more via `@creit.tech/stellar-wallets-kit`
+- 💰 **Live XLM Balance** — Displays connected wallet balance immediately
+- 📊 **Real-time Results** — Live updating bar graph showing vote distribution as votes come in
+- 🗳️ **On-chain Voting** — Casting a vote triggers a real Soroban smart contract transaction
+- ✅ **Stellar Explorer Link** — Direct link to verify transaction and contract events on `stellar.expert`
+- 📝 **Double-Vote Protection** — Tracks voters on-chain to reject duplicate votes transparently
+- 🔴 **Live Event Feed** — Real-time event streaming via Soroban RPC `getEvents` polling
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **Smart Contract** | Rust · Soroban SDK · WebAssembly |
+| **Frontend** | React · TypeScript · Vite |
+| **Wallet Integration** | `@creit.tech/stellar-wallets-kit` |
+| **Styling** | Vanilla CSS |
+| **Deployment** | Vercel (frontend) · Stellar Testnet (contract) |
+
+---
+
+## 📋 Smart Contract Details
+
+**Contract ID (Testnet):**
 ```
-Inside your `.env` file, configure the following:
-```env
-VITE_CONTRACT_ID=CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2
+CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2
 ```
 
-### 2. Install & Start Development Server
+**Verify on Stellar Expert:**
+🔗 [View Contract on Explorer](https://stellar.expert/explorer/testnet/contract/CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2)
+
+---
+
+### 🧾 Transaction Hashes (Verifiable Testnet Operations)
+
+These are the on-chain transactions for compiling, deploying, and initializing the smart contract:
+
+| Operation | Transaction Hash | Explorer Link |
+|---|---|---|
+| WASM Upload | `c0c108cb7a73eb422d41f6ee9a4c1d250671a1c345378a42d7c4ab99a0f6636e` | [View on Stellar Expert ↗](https://stellar.expert/explorer/testnet/tx/c0c108cb7a73eb422d41f6ee9a4c1d250671a1c345378a42d7c4ab99a0f6636e) |
+| Contract Instantiation | `320cc7f1c21b46fca1738e6627086288475ad126e35a97ce005b33c0c1c277fd` | [View on Stellar Expert ↗](https://stellar.expert/explorer/testnet/tx/320cc7f1c21b46fca1738e6627086288475ad126e35a97ce005b33c0c1c277fd) |
+| Contract Initialization | `b4ae1fd3cf36f395166671ae41fc881dd86925872bd6b41e15cb315629bbcb6b` | [View on Stellar Expert ↗](https://stellar.expert/explorer/testnet/tx/b4ae1fd3cf36f395166671ae41fc881dd86925872bd6b41e15cb315629bbcb6b) |
+
+---
+
+### 👛 Wallet Options Available
+
+The app supports multiple wallets via the connect modal:
+
+![Wallet Options](./docs/wallet-options.png)
+
+### Contract Functions
+
+| Function | Description |
+|----------|-------------|
+| `initialize(admin, question, options)` | Sets the question, list of options, and admin address (One-time call) |
+| `vote(voter, option_index)` | Casts a vote for the option; updates status & emits a `vote` event |
+| `get_question()` | Returns the active poll question |
+| `get_options()` | Returns the list of all available options |
+| `get_results()` | Returns current vote counts mapped by option index |
+| `has_voted(voter)` | Checks whether the address has already voted |
+
+### Contract Architecture
+```rust
+// On-chain storage keys
+enum DataKey {
+    Admin,       // Admin address
+    Question,    // Poll question
+    Options,     // List of options (Vec<String>)
+    Votes,       // Map of option index to vote count
+    Voters,      // Map of voter address to boolean
+    Initialized, // Initialization status
+}
+```
+
+---
+
+## 🚀 Run Locally
+
+### Prerequisites
+- Node.js v18+
+- Rust + `wasm32-unknown-unknown` target
+- Freighter or other supported wallet extension (set to **Testnet**)
+
+### Frontend
 ```bash
+# Clone the repo
+git clone https://github.com/anishakumari97/Live-Poll-Stellar-White-Belt-Level-2.git
+cd Live-Poll-Stellar-White-Belt-Level-2/frontend
+
+# Install dependencies
 npm install
+
+# Create .env file
+echo "VITE_CONTRACT_ID=CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2" > .env
+
+# Start dev server
 npm run dev
 ```
 
----
-
-## 🧪 Testing the Contract
-To run the automated tests verifying double-voting protection and boundary options:
+### Smart Contract (optional — already deployed)
 ```bash
 cd contract
-cargo test
+
+# Build WASM
+stellar contract build
+
+# Deploy to Testnet
+stellar contract deploy --wasm target/wasm32v1-none/release/live_poll_contract.wasm --source deployer --network testnet
 ```
 
 ---
 
-## 📄 License
+## 🔄 User Flow
 
-MIT
+```
+1. Open app → Connect wallet (Freighter / xBull / Albedo etc.)
+      ↓
+2. See your XLM balance + active poll options
+      ↓
+3. Click "Vote" on your chosen option
+      ↓
+4. Wallet extension pops up → Approve transaction
+      ↓
+5. Transaction submitted & confirmed on Stellar Testnet
+      ↓
+6. Graph updates live + Tx success banner with Stellar Explorer link shows up ✅
+```
+
+---
+
+## 📁 Project Structure
+
+```
+stellar-live-poll/
+├── contract/
+│   ├── src/
+│   │   ├── lib.rs            # Soroban smart contract logic
+│   │   └── test.rs           # Automated unit tests
+│   └── Cargo.toml
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   │   ├── PollCard.tsx       # Poll question and voting buttons
+    │   │   ├── WalletConnect.tsx  # Wallet connect modal and status
+    │   │   └── TxStatus.tsx       # Transaction state banner
+    │   ├── lib/
+    │   │   ├── config.ts          # Network configurations
+    │   │   ├── contract.ts        # Soroban RPC invocations
+    │   │   ├── events.ts          # Event listening & fetching
+    │   │   └── wallet.ts          # StellarWalletsKit helper
+    │   ├── App.tsx
+    │   └── main.tsx
+    ├── index.html
+    └── vite.config.ts
+```
+
+---
+
+## 🌐 Live Deployment
+
+| | Link |
+|--|------|
+| **Frontend** | https://github.com/anishakumari97/Live-Poll-Stellar-White-Belt-Level-2 |
+| **Contract** | [stellar.expert/explorer/testnet/contract/CC4G...](https://stellar.expert/explorer/testnet/contract/CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2) |
+| **Network** | Stellar Testnet |
+| **RPC** | https://soroban-testnet.stellar.org |
+
+---
+
+## 👤 Author
+
+**anishakumari97** — [@anishakumari97](https://github.com/anishakumari97)
+
+---
+
+<div align="center">
+  Built with ❤️ on <strong>Stellar Soroban</strong>
+</div>

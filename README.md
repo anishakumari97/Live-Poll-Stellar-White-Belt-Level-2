@@ -14,7 +14,7 @@
 
 ## 📸 Screenshots
 
-| Dashboard | Connect Wallet |
+| OnChain success |wallet options |
 |:---------:|:--------------:|
 | ![OnChain success](./images/sucess%20on%20chain.png) | ![wallet options](./images/wallet%20options%20.png) |
 

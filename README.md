@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-live--poll--stellar.vercel.app-10b981?style=for-the-badge)](https://github.com/anishakumari97/Live-Poll-Stellar-White-Belt-Level-2)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-live--poll--stellar--white--belt--level.vercel.app-10b981?style=for-the-badge)](https://live-poll-stellar-white-belt-level.vercel.app/)
 [![Stellar Testnet](https://img.shields.io/badge/Network-Stellar_Testnet-00D2FF?style=for-the-badge)](https://stellar.org)
 [![Soroban](https://img.shields.io/badge/Smart_Contract-Soroban-FF6B6B?style=for-the-badge)](https://soroban.stellar.org)
 
@@ -16,7 +16,7 @@
 
 | Dashboard | Connect Wallet |
 |:---------:|:--------------:|
-| ![Dashboard](./docs/live-results.png) | ![Connect Wallet](./docs/wallet-options.png) |
+| ![Dashboard](./images/sucess%20on%20chain.png) | ![Connect Wallet](./images/wallet%20options%20.png) |
 
 ---
 
@@ -72,7 +72,7 @@ These are the on-chain transactions for compiling, deploying, and initializing t
 
 The app supports multiple wallets via the connect modal:
 
-![Wallet Options](./docs/wallet-options.png)
+![Wallet Options](./images/wallet%20options%20.png)
 
 ### Contract Functions
 
@@ -186,7 +186,7 @@ stellar-live-poll/
 
 | | Link |
 |--|------|
-| **Frontend** | https://github.com/anishakumari97/Live-Poll-Stellar-White-Belt-Level-2 |
+| **Frontend** | [live-poll-stellar-white-belt-level.vercel.app](https://live-poll-stellar-white-belt-level.vercel.app/) |
 | **Contract** | [stellar.expert/explorer/testnet/contract/CC4G...](https://stellar.expert/explorer/testnet/contract/CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2) |
 | **Network** | Stellar Testnet |
 | **RPC** | https://soroban-testnet.stellar.org |

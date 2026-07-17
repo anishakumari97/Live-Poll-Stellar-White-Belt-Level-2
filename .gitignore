@@ -1,0 +1,12 @@
+# Node
+node_modules/
+dist/
+.env
+*.log
+
+# Rust
+contract/target/
+contract/**/*.wasm
+
+# OS
+.DS_Store

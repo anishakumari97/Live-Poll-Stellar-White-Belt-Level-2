@@ -16,7 +16,7 @@
 
 | Dashboard | Connect Wallet |
 |:---------:|:--------------:|
-| ![Dashboard](./images/sucess%20on%20chain.png) | ![Connect Wallet](./images/wallet%20options%20.png) |
+| ![OnChain success](./images/sucess%20on%20chain.png) | ![wallet options](./images/wallet%20options%20.png) |
 
 ---
 

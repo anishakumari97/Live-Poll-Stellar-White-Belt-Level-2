@@ -12,4 +12,4 @@ export const EXPLORER_CONTRACT_URL =
 // Paste the Contract ID printed by:
 //   stellar contract deploy --wasm ... --network testnet
 export const CONTRACT_ID =
-  import.meta.env.VITE_CONTRACT_ID ?? "PASTE_YOUR_DEPLOYED_CONTRACT_ID_HERE";
+  import.meta.env.VITE_CONTRACT_ID ?? "CC4GI6ZAZQZRC5OKA6MVLLVAXNZXRBK6UUCONVXWCSXGWHMVJDFREYM2";
